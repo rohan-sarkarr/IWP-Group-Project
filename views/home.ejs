@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+  <h1 class="text-center intro">Welcome to Blogg.In!</h1>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <% whole_content.forEach(function(element){ %>
+          <div class="col-sm-4">
+            <div class="card" style="width:33rem;">
+              <div class="card-body">
+                <img class="card-img-top" src= "https://thebookofoi.files.wordpress.com/2018/03/how-blogging-works.jpg" alt=" Blog Image" height="190px" width="290px">  
+                <h3 class="card-title">
+                  <%= element.Title %>
+                </h3>
+                <p class="card-text">
+                  <%= element.Body.substring(0,140) + "......" %>
+                </p>
+                <a href="/posts/<%= element.Title%>" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <%})%>
+      </div>
+    </div>
+  </div>
+<%- include("partials/footer.ejs") %>
+

@@ -1,0 +1,50 @@
+<%- include("partials/header.ejs") %>
+  <h1 class="text-center ">About Us</h1>
+  <div class="container-fluid">
+    <h3> Frontend Development</h3>
+    <br>
+    <div class="container">
+      <div class="row">
+        <% team_members_frontend.forEach(function(element){ %>
+          <div class="col-sm-4">
+            <div class="card about-card" style="width: 28rem">
+              <div class="card-body">
+                <img class="card-img-top" src= "https://cdn.pixabay.com/photo/2017/01/30/23/52/female-2022387_960_720.png" alt=" Member Image" height="230px" width="240px">  
+                <h3 class="card-title about-title">
+                  <%= element[0] %>
+                </h3>
+                <p class="card-text about-text">
+                  <%= element[1] %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <%})%>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <h3> Backend Development</h3>
+    <br>
+    <div class="container">
+      <div class="row">
+        <% team_members_backend.forEach(function(element){ %>
+          <div class="col-sm-4">
+            <div class="card about-card" style="width: 28rem">
+              <div class="card-body">
+                <img class="card-img-top" src= "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png" alt=" Member Image" height="230px" width="240px">  
+                <h3 class="card-title about-title">
+                  <%= element[0] %>
+                </h3>
+                <p class="card-text about-text">
+                  <%= element[1] %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <%})%>
+      </div>
+    </div>
+  </div>
+
+  <%- include("partials/footer.ejs") %>
